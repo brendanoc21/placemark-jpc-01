@@ -462,7 +462,7 @@ val unspecified_scheme = ColorFamily(
 )
 
 @Composable
-fun PlacemarkJPC01Theme(
+fun PlacemarkJPCTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,

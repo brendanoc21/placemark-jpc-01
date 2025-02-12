@@ -11,14 +11,18 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import ie.setu.placemark_jpc_01.ui.theme.PlacemarkJPC01Theme
+import ie.setu.placemark_jpc_01.ui.theme.PlacemarkJPCTheme
+import timber.log.Timber
+import timber.log.Timber.i
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        Timber.plant(Timber.DebugTree())
+        i("Placemark MainActivity started...")
         setContent {
-            PlacemarkJPC01Theme {
+            PlacemarkJPCTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "Android",
@@ -41,7 +45,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    PlacemarkJPC01Theme {
+    PlacemarkJPCTheme {
         Greeting("Android")
     }
 }
